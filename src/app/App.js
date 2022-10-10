@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import "./App.css"
 
 import Header from '../components/Header/Header';
+import Homepage from '../components/Homepage/Homepage';
 
 const App = () => {
 
@@ -12,7 +13,7 @@ const App = () => {
         <div className="app">
           <Header />
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Homepage />} />
           </Routes>
         </div>
     </BrowserRouter>
