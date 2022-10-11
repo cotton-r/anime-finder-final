@@ -1,9 +1,12 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
-const reducers = combineReducers({
-    // trendingAnime: trendingAnimeReducer,
-});
+import { animeApi } from "../services/animeApi";
 
-export const store = configureStore({
-    reducer: reducers,
+import animeBannerReducer from '../components/AnimeBanner/AnimeBannerSlice';
+
+export default configureStore({
+    reducer: {
+        [animeApi.reducerPath]: animeApi.reducer,
+        animeBanner: animeBannerReducer,
+    },
 });
