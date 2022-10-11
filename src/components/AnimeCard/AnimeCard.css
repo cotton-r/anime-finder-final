@@ -32,12 +32,15 @@
 }
 
 .popover-content {
-    color: #ffffff;
+    color: #b8b8b8;
 }
 
-.popover-content h3 {
-    color: #ffffff;
-    font-size: 1rem;
+.popover-header h3 {
+    color: #e7e7e7;
+    font-size: 1.2rem;
+    font-family: 'Outfit';
+    font-weight: 100;
+    margin-bottom: 2px;
 }
 
 .popover-content {
@@ -46,13 +49,39 @@
 
 .popover-ratings {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    font-weight: bold;
+    font-weight: 100;
+    font-size: 0.95rem;
 }
 
 .popover-rating {
     color: #47c44d;
+    margin-bottom: 3px;
 }
+
+.popover-popular {
+    font-size: 0.8rem;
+}
+
+.popover-desc {
+    margin-top: 7px;
+    font-size: 0.85rem;
+}
+
+.popover-desc:after {
+    content  : "";
+    position : absolute;
+    z-index  : 1;
+    bottom   : 0;
+    left     : 0;
+    pointer-events   : none;
+    background-image : linear-gradient(to bottom, 
+                      #ffffff00, 
+                      #2f385f 75%);
+    width    : 100%;
+    height   : 4em;
+  }
 
 .anime-modal {
     z-index: 100;
