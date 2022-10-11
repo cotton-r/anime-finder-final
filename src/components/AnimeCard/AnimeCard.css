@@ -1,0 +1,59 @@
+.anime-card {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.anime-card img {
+    height: 227.7px;
+    min-width: 160.6px;
+}
+
+.darken {
+    display: inline-block;
+    background: #000000;
+    padding: 0;
+}
+
+.darken img {
+    display: block;
+    -webkit-transition: all 0.1s linear;
+       -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+         -o-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+}
+
+.darken:hover img {
+    opacity: 0.5;
+}
+
+.year-released {
+    color: rgb(202, 202, 202, 0.6);
+}
+
+.popover-content {
+    color: #ffffff;
+}
+
+.popover-content h3 {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.popover-content {
+    font-size: 0.75rem;
+}
+
+.popover-ratings {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.popover-rating {
+    color: #47c44d;
+}
+
+.anime-modal {
+    z-index: 100;
+}
