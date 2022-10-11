@@ -9,9 +9,9 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-        <AnimeBanner />
-        <AnimeBanner />
-        <AnimeBanner />
+        <AnimeBanner category="trending" />
+        {/* <AnimeBanner />
+        <AnimeBanner /> */}
     </div>
   );
 };

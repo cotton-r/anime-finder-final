@@ -9,4 +9,6 @@ export default configureStore({
         [animeApi.reducerPath]: animeApi.reducer,
         animeBanner: animeBannerReducer,
     },
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(animeApi.middleware),
 });
