@@ -87,3 +87,47 @@
 .anime-modal {
     z-index: 100;
 }
+
+@media only screen and (max-width: 644px) {
+    .anime-card {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .anime-card img {
+        height: 187.7px;
+        min-width: auto;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .anime-card {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .anime-card img {
+        height: 245.7px;
+        min-width: auto;
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    .anime-card {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .anime-card img {
+        height: 205.7px;
+        min-width: auto;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    .anime-card {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .anime-card img {
+        height: 192.7px;
+        min-width: auto;
+    }
+}

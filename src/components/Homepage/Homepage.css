@@ -14,3 +14,22 @@
     height: 600px;
     width: 300px;
 }
+
+@media only screen and (max-width: 525px) {
+    .homepage {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .anime-banners-container {
+        width: 100%;
+        padding-right: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .category-section-container {
+        height: 400px;
+        width: 100%;
+    }
+  }
