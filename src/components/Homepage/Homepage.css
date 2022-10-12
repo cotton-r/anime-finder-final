@@ -1,0 +1,16 @@
+.homepage {
+    display: flex;
+    justify-content: center;
+}
+
+.anime-banners-container {
+    background-color: blueviolet;
+    width: fit-content;
+    padding-right: 15px;
+}
+
+.category-section-container {
+    background-color: rgb(53, 107, 155);
+    height: 600px;
+    width: 300px;
+}

@@ -1,12 +1,25 @@
 .container {
     width: 100%;
     height: 100%;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-more {
+    width: fit-content;
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 0.8rem;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 228px !important;
 }
 
 .anime-list-wrapper {
@@ -15,6 +28,7 @@
     justify-content: flex-start;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .loading-card {
