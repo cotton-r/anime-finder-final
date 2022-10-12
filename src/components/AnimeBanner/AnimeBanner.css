@@ -75,3 +75,21 @@
         height: 395px !important;
     }
   }
+
+  @media only screen and (max-width: 525px) {
+    .wrapper {
+        height: 515px !important;
+    }
+  }
+
+  @media only screen and (max-width: 395px) {
+    .wrapper {
+        height: 435px !important;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    .wrapper {
+        height: 410px !important;
+    }
+}
