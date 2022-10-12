@@ -5,6 +5,7 @@ import "./App.css"
 
 import Header from '../components/Header/Header';
 import Homepage from '../components/Homepage/Homepage';
+import AnimeCategoryPage from '../components/AnimeCategoryPage/AnimeCategoryPage';
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/anime/:category" element={<AnimeCategoryPage />} />
           </Routes>
         </div>
     </BrowserRouter>

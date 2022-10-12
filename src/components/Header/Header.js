@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // import Ant Design component and icons
 import { AudioOutlined } from '@ant-design/icons';
@@ -16,7 +17,9 @@ const Header = () => {
   return (
     <div className="header">
         <div className='header-title-row'>
-            <h1 className='header-title'>Anime Finder</h1>
+            <Link to={`/`} >
+              <h1 className='header-title'>Anime Finder</h1>
+            </Link>
         </div>
         <div className='header-search-row'>
             <SearchBar />

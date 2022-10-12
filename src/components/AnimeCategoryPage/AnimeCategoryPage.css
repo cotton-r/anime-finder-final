@@ -1,0 +1,26 @@
+.category-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-container {
+    width: 100%;
+    height: 100%;
+    max-width: 890px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
