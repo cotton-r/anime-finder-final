@@ -26,8 +26,12 @@ const AnimeBanner = ({ category }) => {
     const loadingCards = [1, 2, 3, 4, 5];
     let incrementKey = 0;
 
+    // category title capitalise first letter
+    const categoryTitle = `${category.charAt(0).toUpperCase() + category.slice(1)} Anime`
+
   return (
     <div className='container'>
+      <h3 className='category-title'>{categoryTitle}</h3>
       {!isFetching
         ? <div className="wrapper">
             <div className='anime-list-wrapper'>
