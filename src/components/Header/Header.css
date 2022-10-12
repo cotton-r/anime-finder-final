@@ -13,6 +13,11 @@
     padding: 0.5rem;
 }
 
+.header-title:hover {
+    color: #ec882a;
+    transition: 0.1s;
+}
+
 .header-search-row {
     display: flex;
     justify-content: center;

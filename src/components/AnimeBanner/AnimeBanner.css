@@ -14,6 +14,10 @@
     font-size: 0.8rem;
 }
 
+.view-more:hover {
+    color: #ec882a;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
