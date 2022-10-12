@@ -9,6 +9,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import './AnimeBanner.css';
 
 import AnimeCard from '../AnimeCard/AnimeCard';
+import { FirstPage } from '@mui/icons-material';
 
 const AnimeBanner = ({ category }) => {
 
@@ -30,7 +31,8 @@ const AnimeBanner = ({ category }) => {
       {!isFetching
         ? <div className="wrapper">
             <div className='anime-list-wrapper'>
-              {animeData?.data?.map((anime) => (
+              {/* the below .slice() is so that only the first 5 titles are displayed */}
+              {animeData?.data?.slice(0, 5).map((anime) => (
                 <AnimeCard anime={anime} key={anime.id} />
               ))}
             </div>
