@@ -55,7 +55,7 @@
 
 /* Media Queries */
 
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 1004px) {
     .anime-list-wrapper {
         overflow: visible
     }
@@ -74,13 +74,13 @@
     }
   }
 
-  @media only screen and (max-width: 644px) {
+  @media only screen and (max-width: 729px) {
     .wrapper {
         height: 395px !important;
     }
   }
 
-  @media only screen and (max-width: 525px) {
+  @media only screen and (max-width: 600px) {
     .wrapper {
         height: 515px !important;
     }
@@ -89,6 +89,12 @@
   @media only screen and (max-width: 395px) {
     .wrapper {
         height: 435px !important;
+    }
+    .anime-list-wrapper {
+        justify-content: center;
+    }
+    .category-title {
+        margin-left: 25px;
     }
 }
 

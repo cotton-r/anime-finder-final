@@ -16,5 +16,5 @@ export default configureStore({
         categories: categoriesReducer,
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(animeApi.middleware),
+    getDefaultMiddleware().concat(animeApi.middleware, categoriesApi.middleware),
 });

@@ -1,0 +1,29 @@
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    border-radius: 3px;
+    background-color: rgb(41, 52, 71);
+}
+
+.categories-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 410px;
+}
+
+.categories-container-title h3 {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.individual-category p {
+    font-size: 0.85rem;
+    font-weight: 200;
+}
+
+.categories-container-break {
+    border-top: 1px solid rgb(199, 199, 199);
+    margin: 10px 0px;
+}

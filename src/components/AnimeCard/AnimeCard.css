@@ -88,7 +88,7 @@
     z-index: 100;
 }
 
-@media only screen and (max-width: 644px) {
+@media only screen and (max-width: 729px) {
     .anime-card {
         margin-left: 10px;
         margin-bottom: 10px;
@@ -99,7 +99,7 @@
     }
 }
 
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 600px) {
     .anime-card {
         margin-left: 10px;
         margin-bottom: 10px;
@@ -112,7 +112,8 @@
 
 @media only screen and (max-width: 395px) {
     .anime-card {
-        margin-left: 10px;
+        margin-left: 7.5px;
+        margin-right: 7.55px;
         margin-bottom: 10px;
     }
     .anime-card img {
