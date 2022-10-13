@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AnimeBanner from '../AnimeBanner/AnimeBanner';
+import Categories from '../Categories/Categories';
 
 import "./Homepage.css";
 
@@ -15,7 +16,7 @@ const Homepage = () => {
         <AnimeBanner /> */}
       </div>
       <div className='category-section-container'>
-        <p>hello</p>
+        <Categories />
       </div>
     </div>
   );
