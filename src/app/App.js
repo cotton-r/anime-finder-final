@@ -6,6 +6,7 @@ import "./App.css"
 import Header from '../components/Header/Header';
 import Homepage from '../components/Homepage/Homepage';
 import AnimeCategoryPage from '../components/AnimeCategoryPage/AnimeCategoryPage';
+import GenrePage from '../components/GenrePage/GenrePage';
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/anime/:category" element={<AnimeCategoryPage />} />
+            <Route path="/explore/:genre" element={<GenrePage />} />
           </Routes>
         </div>
     </BrowserRouter>

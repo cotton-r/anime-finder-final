@@ -17,7 +17,11 @@ export const categoriesApi = createApi({
             query: () => 
                 createRequest(`/categories?page%5Blimit%5D=40`)
         }),
+        getThisCategory: builder.query({
+            query: (genre) =>
+                createRequest(`/anime?filter%5Bcategories%5D=${genre}&page%5Blimit%5D=20&sort=-average_rating`)
+        }),
     })
 });
 
-export const { useGetAllCategoriesQuery } = categoriesApi;
+export const { useGetAllCategoriesQuery, useGetThisCategoryQuery } = categoriesApi;

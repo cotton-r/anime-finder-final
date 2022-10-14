@@ -6,6 +6,7 @@ import { categoriesApi } from "../services/categoriesApi";
 import animeBannerReducer from '../components/AnimeBanner/AnimeBannerSlice';
 import animeCategoryReducer from "../components/AnimeCategoryPage/AnimeCategoryPageSlice";
 import categoriesReducer from '../components/Categories/CategoriesSlice';
+import genrePageReducer from '../components/GenrePage/GenrePageSlice';
 
 export default configureStore({
     reducer: {
@@ -14,6 +15,7 @@ export default configureStore({
         animeBanner: animeBannerReducer,
         animeCategory: animeCategoryReducer,
         categories: categoriesReducer,
+        genrePage: genrePageReducer,
     },
     middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(animeApi.middleware, categoriesApi.middleware),
