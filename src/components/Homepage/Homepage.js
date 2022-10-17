@@ -12,8 +12,8 @@ const Homepage = () => {
     <div className="homepage">
       <div className='anime-banners-container'>
         <AnimeBanner category="trending" />
-        {/* <AnimeBanner />
-        <AnimeBanner /> */}
+        <AnimeBanner category="Most Popular" />
+        {/* <AnimeBanner /> */}
       </div>
       <div className='category-section-container'>
         <Categories />

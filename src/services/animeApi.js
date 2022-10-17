@@ -17,7 +17,11 @@ export const animeApi = createApi({
             query: (category) =>
                 createRequest(`/${category}/anime?limit=20`)
         }),
+        getPopularAnime: builder.query({
+            query: () =>
+                createRequest(`/anime?page%5Blimit%5D=20&sort=popularity-rank`)
+        }),
     })
 });
 
-export const { useGetCategoryOfAnimeQuery } = animeApi;
+export const { useGetCategoryOfAnimeQuery, useGetPopularAnimeQuery } = animeApi;

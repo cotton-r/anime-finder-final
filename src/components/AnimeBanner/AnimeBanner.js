@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { useGetCategoryOfAnimeQuery } from '../../services/animeApi';
-import { addTrendingAnime } from './AnimeBannerSlice';
+import { useGetCategoryOfAnimeQuery, useGetPopularAnimeQuery } from '../../services/animeApi';
+import { addTrendingAnime, addPopularAnime } from './AnimeBannerSlice';
 
 import CircularProgress from "@mui/material/CircularProgress";
 
@@ -15,12 +15,14 @@ const AnimeBanner = ({ category }) => {
 
     const dispatch = useDispatch();
     const animeData = useSelector((state) => state.animeBanner.trendingAnime);
-
     const { data: trendingAnime, isFetching } = useGetCategoryOfAnimeQuery(category);
 
+    const popularAnimeData = useSelector((state) => state.animeBanner.popularAnime)
+    const { data: popularAnime, popularIsFetching } = useGetPopularAnimeQuery();
+
     useEffect(() => {
-        dispatch(addTrendingAnime(trendingAnime));
-    }, [trendingAnime]);
+        dispatch(category === 'trending' ? addTrendingAnime(trendingAnime) : addPopularAnime(popularAnime));
+    }, [trendingAnime, popularAnime]);
 
     // hard coded array for placeholder loading symbol cards
     const loadingCards = [1, 2, 3, 4, 5];
@@ -38,9 +40,14 @@ const AnimeBanner = ({ category }) => {
     const mapAnime = (number) => ( 
       <div className='anime-list-wrapper'>
         {/* the below .slice() is so that only the first (5) titles are displayed */}
-        {animeData?.data?.slice(0, (number)).map((anime) => (
-          <AnimeCard anime={anime} key={anime.id} />
-        ))}
+        {category === 'trending' ? 
+          animeData?.data?.slice(0, (number)).map((anime) => (
+            <AnimeCard anime={anime} key={anime.id} />
+          ))
+        :
+          popularAnimeData?.data?.slice(0, (number)).map((anime) => (
+            <AnimeCard anime={anime} key={anime.id} />
+          ))}
       </div>
     );
 

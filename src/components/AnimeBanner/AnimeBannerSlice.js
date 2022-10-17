@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     trendingAnime: [],
+    popularAnime: [],
 };
 
 export const animeBannerSlice = createSlice({
@@ -11,9 +12,12 @@ export const animeBannerSlice = createSlice({
         addTrendingAnime: (state, action) => {
             state.trendingAnime = action.payload;
         },
+        addPopularAnime: (state, action) => {
+            state.popularAnime = action.payload;
+        },
     }
 });
 
-export const { addTrendingAnime } = animeBannerSlice.actions;
+export const { addTrendingAnime, addPopularAnime } = animeBannerSlice.actions;
 
 export default animeBannerSlice.reducer;
