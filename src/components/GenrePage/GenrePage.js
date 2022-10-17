@@ -7,6 +7,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 import './GenrePage.css';
 import AnimeListItem from '../AnimeListItem/AnimeListItem';
 
+import { v4 as uuidv4 } from "uuid";
+
 const GenrePage = () => {
     
     const { genre } = useParams();
@@ -17,8 +19,6 @@ const GenrePage = () => {
     useEffect(() => {
         dispatch(addThisCategory(thisCategory));
     }, [thisCategory]);
-
-    console.log(genreData?.data?.attributes)
 
     // hard coded array for placeholder loading symbol cards
     const loadingCards = [1, 2, 3, 4, 5];
@@ -37,8 +37,8 @@ const GenrePage = () => {
       <div className='genre-list-wrapper'>
         {/* the below .slice() is so that only the first (5) titles are displayed */}
         {genreData?.data?.slice(0, (number)).map((anime) => (
-            <div className='anime-list-item'>
-                <AnimeListItem anime={anime} key={anime.id} />
+            <div className='anime-list-item' key={uuidv4()}>
+                <AnimeListItem anime={anime} />
             </div>
         ))}
       </div>

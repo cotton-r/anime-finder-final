@@ -1,0 +1,52 @@
+.list-anime-image-actual {
+    min-width: 75px;
+    height: auto;
+    max-width: 75px;
+}
+
+.list-anime-item {
+    display: flex;
+    height: fit-content;
+    margin-bottom: 7px;
+    background-color: #2d3142;
+}
+
+.list-anime-text {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-anime-title-ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.list-anime-title {
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+.list-anime-ratings {
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+.list-anime-ratings-percent {
+    color: #47c44d;
+    font-weight: 300;
+}
+
+.list-anime-description {
+    margin-top: 15px;
+    font-weight: 100;
+    font-size: 0.82rem;
+    height: 40px;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

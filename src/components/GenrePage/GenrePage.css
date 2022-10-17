@@ -1,14 +1,8 @@
 .genre-list-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: brown;
     height: 100%;
     width: 100%;
-}
-
-.anime-list-item {
-    background-color: aqua;
-    height: 40px;
 }
 
 .anime-list {
