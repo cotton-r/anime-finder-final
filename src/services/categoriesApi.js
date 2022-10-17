@@ -19,7 +19,7 @@ export const categoriesApi = createApi({
         }),
         getThisCategory: builder.query({
             query: (genre) =>
-                createRequest(`/anime?filter%5Bcategories%5D=${genre}&page%5Blimit%5D=20&sort=-average_rating`)
+                createRequest(`/anime?filter%5Bcategories%5D=${genre}&page%5Blimit%5D=20&sort=popularity-rank`)
         }),
     })
 });

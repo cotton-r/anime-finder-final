@@ -5,7 +5,9 @@ import { useGetCategoryOfAnimeQuery } from '../../services/animeApi';
 import { addTrendingCategory } from './AnimeCategoryPageSlice';
 import CircularProgress from "@mui/material/CircularProgress";
 import './AnimeCategoryPage.css';
-import AnimeCard from '../AnimeCard/AnimeCard';
+import AnimeListItem from '../AnimeListItem/AnimeListItem';
+
+import { v4 as uuidv4 } from "uuid";
 
 const AnimeCategoryPage = () => {
     
@@ -32,10 +34,12 @@ const AnimeCategoryPage = () => {
     
     //dynamically load the anime cards so that they can use the 'number' variable
     const mapAnime = (number) => ( 
-      <div className='category-list-wrapper'>
+      <div className=' genre-list-wrapper'>
         {/* the below .slice() is so that only the first (5) titles are displayed */}
         {animeData?.data?.slice(0, (number)).map((anime) => (
-          <AnimeCard anime={anime} key={anime.id} />
+          <div className='anime-list-item' key={uuidv4()}>
+            <AnimeListItem anime={anime} />
+          </div>
         ))}
       </div>
     );
@@ -45,7 +49,9 @@ const AnimeCategoryPage = () => {
       <h3 className='category-title'>{categoryTitle}</h3>
       {!isFetching
         ? <div className="category-wrapper">
-            {mapAnime(numberToMap)}
+            <div className='anime-list'>
+              {mapAnime(numberToMap)}
+            </div>
           </div>
         :
         <div className='category-wrapper'>
